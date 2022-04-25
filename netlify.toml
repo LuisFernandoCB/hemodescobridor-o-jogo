@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "https://hemodescobridor.netlify.app"
+  from = "https://hemodescobridor.netlify.app/"
   to = "https://hemodescobridor.netlify.app/dist/index.html"
   status = 301
   force = true
