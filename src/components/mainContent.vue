@@ -8,8 +8,7 @@
       online onde você toma o papel de um(a) profissional em
       <span class="strongG">Biomedicina</span>. Seu objetivo é realizar
       <span class="strongB">testes</span> com amostras
-      <span class="strongRR">sanguíneas</span> e através da análise, fazer um
-      relatório constando o <span class="strongO">tipo sanguíneo</span> de um
+      <span class="strongRR">sanguíneas</span> e através da análise, informar o <span class="strongO">tipo sanguíneo</span> de um
       paciente. Está pronto(a)? Agora
       <span class="strongP">vidas dependem de você</span>! Descubra o tipo
       sanguíneo abaixo com os seus conhecimentos
