@@ -29,8 +29,7 @@ export default {
 h1,
 h2,
 h3,
-p,
-label {
+p {
   color: white;
 }
 
