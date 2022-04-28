@@ -1,7 +1,6 @@
 const url = new URLSearchParams(window.location.search);
 const acertos = url.get("acertos");
 const erros = url.get("erros");
-const tema = url.get("tema");
 
 function resultado() {
   if (acertos == 0) {
@@ -31,31 +30,20 @@ function resultado() {
   }
 }
 
-
-
-
-const btn = document.querySelector("#btn");
-const btnT = document.querySelector("#btn");
+const btnT = document.querySelector("#btnTEMA");
 const pT = document.querySelector(".p");
 const bodyT = document.querySelector("#body");
 const mainT = document.querySelector("#main");
 
-
 function claro(event) {
-    if(event.type === "toutchstat") event.preventDefault();
-    
-    mainT.classList.toggle("active");
-    btnT.classList.toggle("active");
-    pT.classList.toggle("active");
-    bodyT.classList.toggle("active");
-}
+  if (event.type === "toutchstat") event.preventDefault();
 
-if (tema == "claro") {
   mainT.classList.toggle("active");
   btnT.classList.toggle("active");
   pT.classList.toggle("active");
   bodyT.classList.toggle("active");
 }
 
-btn.addEventListener("click", claro);
-btn.addEventListener("toutchstart", claro);
+
+btnT.addEventListener("click", claro);
+btnT.addEventListener("toutchstart", claro);

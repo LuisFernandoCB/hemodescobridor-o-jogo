@@ -3,7 +3,7 @@
     <h1>Hemodescobridor - O Jogo</h1>
   </section>
   <section>
-    <p>
+    <p class="p">
       Bem-Vindo(a) ao <span class="strongR">Hemodescobridor</span>, um jogo
       online onde você toma o papel de um(a) profissional em
       <span class="strongG">Biomedicina</span>. Seu objetivo é realizar
@@ -18,14 +18,14 @@
   <section id="divididor">
     <div id="borda1">
       <section id="sangue">
-        <h2>
+        <h2 class="p">
           Fator
           <abbr style="text-decoration: none" title="Recursos Humanos">RH</abbr>
         </h2>
         <div class="lamina">
           <div id="gotaD" :style="gotaD"></div>
         </div>
-        <h2>
+        <h2 class="p">
           Sistema
           <abbr style="text-decoration: none" title="Abaixo-assinado">ABO</abbr>
         </h2>
@@ -37,7 +37,7 @@
     </div>
     <div id="borda2">
       <section id="opcoes">
-        <h2>Opções</h2>
+        <h2 class="p">Opções</h2>
         <div id="reagir">
           <div>
             <h3>
@@ -60,45 +60,45 @@
         </div>
         <hr />
         <div id="resultado">
-          <h2>Resultado</h2>
+          <h2 class="p">Resultado</h2>
           <div>
-            <p v-if="fir">A <span class="strongB">primeira</span> amostra...</p>
-            <p v-else-if="firEIF">
+            <p class="p" v-if="fir">A <span class="strongB">primeira</span> amostra...</p>
+            <p class="p" v-else-if="firEIF">
               A <span class="strongB">primeira</span> amostra...
               <span class="strongRR">Coagulou</span>!
             </p>
-            <p v-else>A <span class="strongB">primeira</span> amostra... Não coagulou.</p>
+            <p class="p" v-else>A <span class="strongB">primeira</span> amostra... Não coagulou.</p>
           </div>
           <div>
-            <p v-if="sec">A <span class="strongY">segunda</span> amostra...</p>
-            <p v-else-if="secEIF">
+            <p class="p" v-if="sec">A <span class="strongY">segunda</span> amostra...</p>
+            <p class="p" v-else-if="secEIF">
               A <span class="strongY">segunda</span> amostra...
               <span class="strongRR">Coagulou</span>!
             </p>
-            <p v-else>
+            <p class="p" v-else>
               A <span class="strongY">Segunda</span> amostra... Não coagulou.
             </p>
           </div>
           <div>
-            <p v-if="thi">
+            <p class="p" v-if="thi">
               A <span class="strongGR">terceira</span> amostra...
             </p>
-            <p v-else-if="thiEIF">
+            <p class="p" v-else-if="thiEIF">
               A <span class="strongGR">terceira</span> amostra...
               <span class="strongRR">Coagulou</span>!
             </p>
-            <p v-else>
+            <p class="p" v-else>
               A <span class="strongGR">terceira</span> amostra... Não coagulou.
             </p>
           </div>
           <div id="resultadoFORM">
             <div id="STS">
-              <p>Selecione o Resultado</p>
+              <p class="p">Selecione o Resultado</p>
               <div id="dp-menu">
                 <ul id="tipoSangue">
                   <li>
-                    <a href="#" v-if="escolheu">?±</a>
-                    <a href="#" v-else>{{ tipoSelecionado }}</a>
+                    <a href="#STS" v-if="escolheu">?±</a>
+                    <a href="#STS" v-else>{{ tipoSelecionado }}</a>
                     <ul>
                       <li><button @click="clkAP">A⁺</button></li>
                       <li><button @click="clkAN">A⁻</button></li>
@@ -119,12 +119,12 @@
       </section>
     </div>
   </section>
-  <hr />
-  <h2>Placar</h2>
+  <hr/>
+  <h2 class="p">Placar</h2>
   <div>
     <p id="acertos">Acertos: {{ contadorAC }}</p>
     <p id="erros">Erros: {{ contadorER }}</p>
-    <p>
+    <p class="p">
       Se quiser usar uma nova amostra, clique em
       <span class="strongG">Jogar de novo</span>.<br />Caso queira finalizar e
       ver o seu placar final, clique em
@@ -178,9 +178,11 @@ export default {
       } else if (this.tipoSelecionado == this.tipoEscolhido) {
         alert("Acertou! :)")
         this.contadorAC++
+        this.Reset()
       } else {
         alert("Errou! :(")
         this.contadorER++
+        this.Reset()
       }
     },
     clkAP() {

@@ -1,7 +1,13 @@
 <template>
-  <main>
-    <mainContent />
-  </main>
+    <main id="main">
+        <mainContent />
+    </main>
+    <!--div id="painel">
+      
+      <div id="botoes">
+        <button id="btnTEMA"></button>
+      </div>
+    </div-->
 </template>
 
 <script>
@@ -17,7 +23,7 @@ export default {
 
 <style>
 @charset "UTF-8";
-
+/* EI VC SEU IDIOTA LE ISSO AQUI, O IDEIA DE MESTRE, FAZ UM JEITO DE QUANDO APERTAR OS BOTOES DOS REAGENTES, ELES FIQUEM SLA TE VIRA DE ALGUM JEITO PRA MOSTRAR Q JA FORAM CLICADOS, CASO N CONSIGA COLCA UM ALERT Q JA CLICOU SLA TE VIRA MENO*/
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap");
 
 * {
@@ -25,6 +31,75 @@ export default {
   margin: 0;
   font-family: "Source Code Pro", Arial;
 }
+
+@media (max-width:760px) {
+   #divididor {
+     flex-direction: column;
+   }
+}
+
+@media (max-width: 540px) {
+  #finalizar {
+  flex-direction: column;
+  gap: 10px;
+}
+}
+/*
+#btnTEMA {
+  width: 57px;
+  height: 57px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.7s;
+}
+
+#btnTEMA.active {
+  background-color: black;
+}
+
+#btnTEMA.active:hover {
+  box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.705);
+}
+
+.p.active {
+  color: black;
+}
+
+#main.active {
+  box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.103);
+}
+
+#body {
+  transition: 1.5s;
+}
+
+#body.active {
+  background-color: white;
+  transition: 1.5s;
+}
+
+#btnTEMA:hover {
+  transform: rotateZ(180deg);
+  background-color: white;
+  box-shadow: 0px 0px 9px 10px rgba(255, 255, 255, 0.371);
+}
+
+--------------------------
+
+#painel {
+  display: flex;
+  gap: 17px;
+  justify-content: center;
+  margin: auto;
+}
+
+#botoes {
+  display: flex;
+  flex-direction: column;
+}
+
+================================================*/
 
 h1,
 h2,
@@ -56,8 +131,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
   margin: auto;
+  padding: 20px;
   max-width: 700px;
   height: auto;
   box-shadow: 0px 1px 20px rgb(250 30 78 / 24%);
@@ -183,7 +258,6 @@ h3 {
 
 #divididor {
   display: flex;
-  /*flex-direction: column;*/
   align-items: center;
   align-self: center;
   width: 100%;
@@ -211,7 +285,7 @@ h3 {
   align-items: center;
   border-radius: 10px;
 
-  width: 300px;
+  width: 100%;
   height: 100px;
   background-color: #0077ff;
   margin: auto;
@@ -323,7 +397,7 @@ h3 {
 
 /*Sub Menu */
 
-#dp-menu ul ul{
+#dp-menu ul ul {
   display: none;
   box-shadow: 4px 4px 15px 1px rgba(0, 0, 0, 0.411);
   background-image: linear-gradient(to bottom, #0077ff, #fa1e4e);
@@ -333,18 +407,17 @@ h3 {
   z-index: 17;
 }
 
-#dp-menu ul li:hover ul{
+#dp-menu ul li:hover ul {
   display: flex;
   flex-direction: column;
   width: max-content;
 }
 
-#dp-menu ul ul{
+#dp-menu ul ul {
   width: 150px;
 }
 
 #dp-menu ul ul li a {
   display: block;
 }
-
 </style>

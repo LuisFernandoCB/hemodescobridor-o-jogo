@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado do Jogo</title>
-</head>
-<body>
-    <script>
-        const url = new URLSearchParams(window.location.search)
-        console.log(url)
-        const acertos = url.get("acertos")
-        const erros = url.get("erros")
-
-        function uau() {
-            alert(acertos)
-        }
-
-        function uauu() {
-            alert(erros)
-        }
-    </script>
-    <div>
-        <button onclick="uau()">me clica acertos</button>
-        <button onclick="uauu()">me clica erros</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hemodescobridor - O Resultado</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="js.js" defer></script>
+  </head>
+  <body id="body">
+    <div id="painel">
+      <main id="main">
+        <h1>Hemodescobridor - O Resultado</h1>
+        <p class="p">
+          Parabéns jogador(a)! Você
+          <span style="color: #8c00ff">finalizou com sucesso</span> o seu
+          trabalho como <span style="color: #8c00ff">Biomédico(a)</span>. Vamos
+          ver seu <span style="color: #e0005e">resultado final</span>?
+        </p>
+        <img width="100%"
+          src="https://static.vecteezy.com/ti/vetor-gratis/p2/2143406-happy-jumping-girl-terminado-trabalho-ou-tarefa-conceito-vetor.jpg"
+          alt="Trabalho concluído"
+        />
+        <div id="finalizar">
+          <button onclick="resultado()" class="btn-final">
+            Revelar resultado
+          </button>
+        </div>
+      </main>
+      <!div id="botoes">
+        <!button id="btnTEMA"></button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
