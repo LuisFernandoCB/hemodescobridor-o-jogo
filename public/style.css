@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Source Code Pro", Arial;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background-color: black;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(250, 30, 78);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 700px;
+    height: auto;
+    box-shadow: 0px 1px 20px rgb(250 30 78 / 24%);
+    border-radius: 20px;
+}
+
+img {
+    display: block;
+    max-width: 500px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#finalizar {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-final {
+    background-color: #fa1e4e;
+    border: none;
+    color: #15ff00;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 20px;
+    transition: 1.5s;
+}
+
+.btn-final:hover {
+    background-color: #c4183d;
+}
+
+#botoes {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn {
+    width: 57px;
+    height: 57px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition-duration: 0.7s;
+}
+
+#btn.active {
+    background-color: black;
+}
+
+#btn.active:hover {
+    box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.705);
+}
+
+.p.active {
+    color: black;
+}
+
+#main.active {
+    box-shadow: 0px 0px 9px 5px rgba(0, 0, 0, 0.103);
+}
+
+#body {
+    transition: 1.5s;
+}
+
+#body.active {
+    background-color: white;
+    transition: 1.5s;
+}
+
+#btn:hover {
+    transform: rotateZ(180deg);
+    box-shadow: 0px 0px 9px 10px rgba(255, 255, 255, 0.371);
+}
+
+#painel {
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+    margin: auto;
+}
+

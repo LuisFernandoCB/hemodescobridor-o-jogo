@@ -5,115 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hemodescobridor - O Resultado</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <style>
-      @charset "UTF-8";
-
-      @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap");
-
-      * {
-        padding: 0;
-        margin: 0;
-        font-family: "Source Code Pro", Arial;
-      }
-      p {
-        color: white;
-      }
-      body {
-        background-color: black;
-        padding: 30px;
-      }
-      h1 {
-        text-align: center;
-        color: rgb(250, 30, 78);
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        margin: auto;
-        max-width: 700px;
-        height: auto;
-        box-shadow: 0px 1px 20px rgb(250 30 78 / 24%);
-        border-radius: 20px;
-      }
-      img {
-        display: block;
-        max-width: 500px;
-        border-radius: 20px;
-        margin: auto;
-      }
-      #finalizar {
-        display: flex;
-        justify-content: center;
-      }
-      .btn-final {
-        background-color: #fa1e4e;
-        border: none;
-        color: #15ff00;
-        border-radius: 20px;
-        cursor: pointer;
-        padding: 15px;
-        font-size: 20px;
-        transition: 1.5s;
-      }
-      .btn-final:hover {
-        background-color: #c4183d;
-      }
-    </style>
+    <script src="js.js" defer></script>
   </head>
-  <body>
-    <script>
-      const url = new URLSearchParams(window.location.search);
-      const acertos = url.get("acertos");
-      const erros = url.get("erros");
-
-      function resultado() {
-        if (acertos == 0) {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, não foi dessa vez :(`
-          );
-        } else if (acertos <= 2) {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, continue tentando!`
-          );
-        } else if (acertos >= 5 && erros == 0) {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, você foi perfeito(a)!`
-          );
-        } else if (acertos >= 5) {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, você foi incrível!`
-          );
-        } else if (acertos >= 2) {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, você foi bem!`
-          );
-        } else {
-          alert(
-            `Você acertou um total de ${acertos} amostras e errou ${erros} amostras, tem coisa errada ai brother '-'`
-          );
-        }
-      }
-    </script>
-    <main>
-      <h1>Hemodescobridor - O Resultado</h1>
-      <p>
-        Parabéns jogador(a)! Você
-        <span style="color: #15ff00">finalizou com sucesso</span> o seu trabalho
-        como <span style="color: #15ff00">Biomédico(a)</span>. Vamos ver seu
-        <span style="color: #ff009d">resultado final</span>?
-      </p>
-      <img
-        src="https://static.vecteezy.com/ti/vetor-gratis/p2/2143406-happy-jumping-girl-terminado-trabalho-ou-tarefa-conceito-vetor.jpg"
-        alt="Trabalho concluído"
-      />
-      <div id="finalizar">
-        <button onclick="resultado()" class="btn-final">
-          Revelar resultado
-        </button>
+  <body id="body">
+    <div id="painel">
+      <main id="main">
+        <h1>Hemodescobridor - O Resultado</h1>
+        <p class="p">
+          Parabéns jogador(a)! Você
+          <span style="color: #8c00ff">finalizou com sucesso</span> o seu
+          trabalho como <span style="color: #8c00ff">Biomédico(a)</span>. Vamos
+          ver seu <span style="color: #e0005e">resultado final</span>?
+        </p>
+        <img
+          src="https://static.vecteezy.com/ti/vetor-gratis/p2/2143406-happy-jumping-girl-terminado-trabalho-ou-tarefa-conceito-vetor.jpg"
+          alt="Trabalho concluído"
+        />
+        <div id="finalizar">
+          <button onclick="resultado()" class="btn-final">
+            Revelar resultado
+          </button>
+        </div>
+      </main>
+      <div id="botoes">
+        <button id="btn"></button>
       </div>
-    </main>
+    </div>
   </body>
 </html>
