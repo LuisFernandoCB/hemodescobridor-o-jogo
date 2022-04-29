@@ -29,7 +29,7 @@ function resultado() {
     );
   }
 }
-
+/*
 const btnT = document.querySelector("#btnTEMA");
 const pT = document.querySelector(".p");
 const bodyT = document.querySelector("#body");
@@ -47,3 +47,4 @@ function claro(event) {
 
 btnT.addEventListener("click", claro);
 btnT.addEventListener("toutchstart", claro);
+*/

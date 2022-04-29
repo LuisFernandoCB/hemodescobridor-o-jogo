@@ -8,10 +8,10 @@
       online onde você toma o papel de um(a) profissional em
       <span class="strongG">Biomedicina</span>. Seu objetivo é realizar
       <span class="strongB">testes</span> com amostras
-      <span class="strongRR">sanguíneas</span> e através da análise, informar o <span class="strongO">tipo sanguíneo</span> de um
-      paciente. Está pronto(a)? Agora
-      <span class="strongP">vidas dependem de você</span>! Descubra o tipo
-      sanguíneo abaixo com os seus conhecimentos
+      <span class="strongRR">sanguíneas</span> e através da análise, informar o
+      <span class="strongO">tipo sanguíneo</span> de um paciente. Está
+      pronto(a)? Agora <span class="strongP">vidas dependem de você</span>!
+      Descubra o tipo sanguíneo abaixo com os seus conhecimentos
       <span class="strongG">Biomédicos</span>.
     </p>
   </section>
@@ -41,19 +41,25 @@
         <div id="reagir">
           <div>
             <h3>
-              <span class="strongG">Gotejar</span><br /><span class="strongB">Anti-A</span>
+              <span class="strongG">Gotejar</span><br /><span class="strongB"
+                >Anti-A</span
+              >
             </h3>
             <button class="btns" id="gotejarAA" @click="GotejarA"></button>
           </div>
           <div>
             <h3>
-              <span class="strongG">Gotejar</span><br /><span class="strongY">Anti-B</span>
+              <span class="strongG">Gotejar</span><br /><span class="strongY"
+                >Anti-B</span
+              >
             </h3>
             <button class="btns" id="gotejarAB" @click="GotejarB"></button>
           </div>
           <div>
             <h3>
-              <span class="strongG">Gotejar</span><br /><span class="strongGR">Anti-D</span>
+              <span class="strongG">Gotejar</span><br /><span class="strongGR"
+                >Anti-D</span
+              >
             </h3>
             <button class="btns" id="gotejarAD" @click="GotejarD"></button>
           </div>
@@ -62,15 +68,21 @@
         <div id="resultado">
           <h2 class="p">Resultado</h2>
           <div>
-            <p class="p" v-if="fir">A <span class="strongB">primeira</span> amostra...</p>
+            <p class="p" v-if="fir">
+              A <span class="strongB">primeira</span> amostra...
+            </p>
             <p class="p" v-else-if="firEIF">
               A <span class="strongB">primeira</span> amostra...
               <span class="strongRR">Coagulou</span>!
             </p>
-            <p class="p" v-else>A <span class="strongB">primeira</span> amostra... Não coagulou.</p>
+            <p class="p" v-else>
+              A <span class="strongB">primeira</span> amostra... Não coagulou.
+            </p>
           </div>
           <div>
-            <p class="p" v-if="sec">A <span class="strongY">segunda</span> amostra...</p>
+            <p class="p" v-if="sec">
+              A <span class="strongY">segunda</span> amostra...
+            </p>
             <p class="p" v-else-if="secEIF">
               A <span class="strongY">segunda</span> amostra...
               <span class="strongRR">Coagulou</span>!
@@ -119,7 +131,7 @@
       </section>
     </div>
   </section>
-  <hr/>
+  <hr />
   <h2 class="p">Placar</h2>
   <div>
     <p id="acertos">Acertos: {{ contadorAC }}</p>
@@ -132,14 +144,10 @@
     </p>
   </div>
   <div id="finalizar">
-    <button class="btn-final btn-final1" @click="Reset()" id="jogarDNV">
+    <button class="btn-final btn-final1" @click="ResetTotal()" id="jogarDNV">
       Jogar de novo
     </button>
-    <button
-      class="btn-final btn-final2"
-      @click="Finalizar"
-      id="finalizarJogo"
-    >
+    <button class="btn-final btn-final2" @click="Finalizar" id="finalizarJogo">
       Finalizar o Jogo
     </button>
   </div>
@@ -174,48 +182,48 @@ export default {
     },
     verificar() {
       if (this.tipoSelecionado == "") {
-        alert("Selecione um tipo sanguíneo!")
+        alert("Selecione um tipo sanguíneo!");
       } else if (this.tipoSelecionado == this.tipoEscolhido) {
-        alert("Acertou! :)")
-        this.contadorAC++
-        this.Reset()
+        alert("Acertou! :)");
+        this.contadorAC++;
+        this.Reset();
       } else {
-        alert("Errou! :(")
-        this.contadorER++
-        this.Reset()
+        alert("Errou! :(");
+        this.contadorER++;
+        this.Reset();
       }
     },
     clkAP() {
-      this.tipoSelecionado = "A⁺"
-      this.escolheu = false
+      this.tipoSelecionado = "A⁺";
+      this.escolheu = false;
     },
     clkABP() {
-      this.tipoSelecionado = "AB⁺"
-      this.escolheu = false
+      this.tipoSelecionado = "AB⁺";
+      this.escolheu = false;
     },
     clkBP() {
-      this.tipoSelecionado = "B⁺"
-      this.escolheu = false
+      this.tipoSelecionado = "B⁺";
+      this.escolheu = false;
     },
     clkOP() {
-      this.tipoSelecionado = "O⁺"
-      this.escolheu = false
+      this.tipoSelecionado = "O⁺";
+      this.escolheu = false;
     },
     clkAN() {
-      this.tipoSelecionado = "A⁻"
-      this.escolheu = false
+      this.tipoSelecionado = "A⁻";
+      this.escolheu = false;
     },
     clkABN() {
-      this.tipoSelecionado = "AB⁻"
-      this.escolheu = false
+      this.tipoSelecionado = "AB⁻";
+      this.escolheu = false;
     },
     clkBN() {
-      this.tipoSelecionado = "B⁻"
-      this.escolheu = false
+      this.tipoSelecionado = "B⁻";
+      this.escolheu = false;
     },
     clkON() {
-      this.tipoSelecionado = "O⁻"
-      this.escolheu = false
+      this.tipoSelecionado = "O⁻";
+      this.escolheu = false;
     },
     Reset() {
       var escolhedorDeSangue = Math.floor(Math.random() * tipos.length);
@@ -224,7 +232,7 @@ export default {
           this.tipoEscolhido = tipos[c];
         }
       }
-      
+
       var tipoEscpt1 = this.tipoEscolhido[0];
       var tipoEscpt2 = this.tipoEscolhido[1];
       this.talvezAB = tipoEscpt1 + tipoEscpt2;
@@ -233,16 +241,51 @@ export default {
       this.gotaB = "background-color: red;";
       this.gotaD = "background-color: red;";
 
-      this.fir = true
-      this.sec = true
-      this.thi = true
-      this.firEIF = false
-      this.secEIF = false
-      this.thiEIF = false
+      this.fir = true;
+      this.sec = true;
+      this.thi = true;
+      this.firEIF = false;
+      this.secEIF = false;
+      this.thiEIF = false;
 
-      console.log("Resetado: " + this.tipoEscolhido)
-      this.tipoSelecionado = ""
-      this.escolheu = true
+      console.log("Resetado: " + this.tipoEscolhido);
+      this.tipoSelecionado = "";
+      this.escolheu = true;
+    },
+    ResetTotal() {
+      let reset = confirm("Deseja mesmo Resetar?");
+      if (reset == true) {
+        var escolhedorDeSangue = Math.floor(Math.random() * tipos.length);
+        for (var c = 0; c < tipos.length; c++) {
+          if (escolhedorDeSangue == c) {
+            this.tipoEscolhido = tipos[c];
+          }
+        }
+
+        var tipoEscpt1 = this.tipoEscolhido[0];
+        var tipoEscpt2 = this.tipoEscolhido[1];
+        this.talvezAB = tipoEscpt1 + tipoEscpt2;
+
+        this.gotaA = "background-color: red;";
+        this.gotaB = "background-color: red;";
+        this.gotaD = "background-color: red;";
+
+        this.fir = true;
+        this.sec = true;
+        this.thi = true;
+        this.firEIF = false;
+        this.secEIF = false;
+        this.thiEIF = false;
+
+        console.log("Resetado: " + this.tipoEscolhido);
+        this.tipoSelecionado = "";
+        this.escolheu = true;
+
+        this.contadorAC = 0;
+        this.contadorER = 0;
+      } else {
+        alert("Clicou sem querer né, sorte sua que eu existo :)");
+      }
     },
     GotejarA() {
       if (this.talvezAB == "AB") {
@@ -275,7 +318,8 @@ export default {
     GotejarD() {
       if (this.talvezAB == "AB") {
         if (this.tipoEscolhido[2] == "⁺") {
-          this.gotaD = "background-image: linear-gradient(125deg, red, #ff8181)";
+          this.gotaD =
+            "background-image: linear-gradient(125deg, red, #ff8181)";
           this.thi = false;
           this.thiEIF = true;
         } else {
