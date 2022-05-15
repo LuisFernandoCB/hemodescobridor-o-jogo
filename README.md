@@ -1,7 +1,7 @@
 # Hemodescobridor O Jogo
 
-Um jogo inspirado nas minhas aulas de biologia feito com Vue.js
+## Um jogo inspirado nas minhas aulas de biologia feito com Vue.js
 
-Tema: Tipagem Sanguínea
+  - Tema: Tipagem Sanguínea
 
-Link: hemodescobridor.netlify.app 
+  - Link: https://hemodescobridor.netlify.app 
